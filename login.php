@@ -1,3 +1,10 @@
+<?php
+
+session_start(); 
+
+
+?>
+
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
@@ -8,22 +15,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="navbar">
-      <img src="images/logo.png">
-      <a class="logo" href="#">WiseMonkey</a>
-        <ul class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">Cources</a></li>
-          <li><a href="moctest.html">MOC Test</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="login.html">Login/Sign up</a></li>
-        </ul>
-    </div>
-    <div class="body">
-    <div class="wrapper">
-      <div class="title-text">
-        <div class="title login">
+
+  
+
+<!-- login code  -->
+
+
+   
+<div class="body">
+<div class="wrapper">
+<div class="title-text">
+<div class="title login">
 Login Form</div>
 <div class="title signup">
 Signup Form</div>
@@ -38,38 +40,45 @@ Signup Form</div>
 </div>
 </div>
 <div class="form-inner">
-          <form action="#" class="login">
+          <form action="logivalidation.php" method="POST" class="login">
             <div class="field">
-              <input type="text" placeholder="Email Address" required>
+              <input type="text" name="newemail" placeholder="Email Address" required>
             </div>
 <div class="field">
-              <input type="password" placeholder="Password" required>
+              <input type="password" name="newpassword" placeholder="Password" required>
             </div>
-<div class="pass-link">
+<div class="pass-link"> 
 <a href="#">Forgot password?</a></div>
 <div class="field btn">
               <div class="btn-layer">
 </div>
-<input type="submit" value="Login">
+<input type="submit" name="submit" value="Login">
             </div>
 <div class="signup-link">
 Not a member? <a href="">Signup now</a></div>
 </form>
-<form action="#" class="signup">
+<form action="validation.php" method="POST" class="signup">
             <div class="field">
-              <input type="text" placeholder="Email Address" required>
+              <input type="text" placeholder="Full Name" name="username" required>
+            </div>
+            <div class="field">
+              <input type="text" placeholder="Email Address" name="email" required>
+            </div>
+            <div class="field">
+              <input type="text" placeholder="Phone Number" name="mobile" required>
             </div>
 <div class="field">
-              <input type="password" placeholder="Password" required>
+              <input type="password" placeholder="Password" name="password" required>
             </div>
 <div class="field">
-              <input type="password" placeholder="Confirm password" required>
+              <input type="password" placeholder="Confirm password" name="cpassword" required>
             </div>
 <div class="field btn">
               <div class="btn-layer">
 </div>
-<input type="submit" value="Signup">
+<input type="submit" name="submit" value="Signup">
             </div>
+            
 </form>
 </div>
 </div>
